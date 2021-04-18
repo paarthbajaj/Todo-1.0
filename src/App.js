@@ -26,7 +26,9 @@ function App() {
 
   const clickHandler = (e) => {
     e.preventDefault();
-    console.log("hello todo");
+     if (todo === "" ) {
+      console.log("arey bhai khali note mt lkho");
+    } else
     db.collection("todo_sample").add({
       inProgress: true,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
